@@ -1,0 +1,121 @@
+/* Custom colors and styling for all three pages */
+:root {
+    --page-bg: #0c1424;
+    --panel-bg: #152239;
+    --panel-border: #2a4059;
+    --soft-text: #c8d7e8;
+    --muted-text: #a9bdd1;
+    --accent: #66d9f4;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(circle at top left, #1c3650 0, #0c1424 52%);
+    color: #f4f8ff;
+}
+
+main { flex: 1; }
+
+.site-navbar {
+    background-color: #101a2c;
+    border-bottom: 1px solid #31465e;
+}
+.site-navbar .navbar-brand { color: #8ae6fa; }
+.site-navbar .nav-link { color: #c6d9e8; }
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link.active { color: #7ce5ff; }
+
+/* The heading class is used on Home, Game, and About Me. */
+.heading {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    text-align: left;
+    color: #ffffff;
+    background-color: transparent;
+    letter-spacing: 1px;
+    padding: 0 0 13px;
+    border-bottom: 3px solid #66d9f4;
+}
+
+.hero-panel {
+    padding: clamp(24px, 5vw, 50px);
+    border: 1px solid #315673;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #1b3954, #152239 66%, #182843);
+}
+.hero-panel p { max-width: 600px; }
+
+/* Bootstrap card styling, reused across all three pages. */
+.card {
+    background-color: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 16px;
+    padding: 3px;
+    text-align: left;
+    color: #f4f8ff;
+}
+.card-body { min-width: 0; }
+
+.text-soft { color: var(--soft-text); }
+.text-muted-custom { color: var(--muted-text); }
+.step-number {
+    color: var(--accent);
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: .08em;
+}
+
+.form-label, .form-check-label { color: #eaf5ff; }
+.form-control, .form-select {
+    border-color: #69839b;
+    background-color: #f8fbff;
+    color: #162638;
+}
+.form-check-input { border-color: #89aec4; }
+.form-check-input:checked { background-color: #0dcaf0; border-color: #0dcaf0; }
+
+.story-card { min-height: 440px; }
+.story-kicker {
+    color: #7ce5ff;
+    letter-spacing: .12em;
+    font-weight: bold;
+}
+.story-text { line-height: 1.8; font-size: 1.08rem; color: #e0edfa; }
+.story-card hr { border-color: #587089; }
+#choices .btn { text-align: left; padding: 13px 18px; }
+
+/* The inventory ID keeps the original CSS assignment's custom styling. */
+#inventory-display {
+    background-color: #142c3a;
+    color: #eaf9ff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+    border: 2px solid #366278;
+    border-radius: 9px;
+    padding: 4px;
+    margin: 12px 0;
+}
+#inventory-display .list-group-item,
+.skill-list .list-group-item {
+    background-color: transparent;
+    color: #d9edf9;
+    border-color: #365064;
+}
+#inventory-count { font-weight: 600; }
+#health-display { font-weight: 800; color: #7ce5ff; }
+.progress { height: 12px; background-color: #34465a; }
+
+.site-footer {
+    background-color: #0b1320;
+    color: #a5bdd1;
+    border-top: 1px solid #24374c;
+    font-size: .85rem;
+}
+
+@media (max-width: 767px) {
+    .story-card { min-height: 0; }
+}

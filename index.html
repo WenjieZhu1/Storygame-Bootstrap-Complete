@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10182b">
+  <title>Home | Dungeon Adventure</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top site-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">◆ Dungeon Adventure</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavbar" aria-controls="siteNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="siteNavbar">
+      <ul class="navbar-nav ms-auto gap-lg-2">
+        <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="game.html">Game</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <main class="container py-4 py-md-5">
+    <div class="row g-4 align-items-stretch">
+      <section class="col-12 col-lg-7">
+        <div class="hero-panel h-100">
+          <span class="badge rounded-pill text-bg-info mb-3">CHOOSE YOUR PATH</span>
+          <h1 class="heading">Dungeon Adventure</h1>
+          <p class="lead text-soft mb-3">Explore the dungeon. Find the key. Make the right choices.</p>
+          <p>You wake up in a dark dungeon with no memory of your past. Two paths are in front of you. Each choice can change your story.</p>
+          <div class="d-flex flex-wrap gap-2 mt-4">
+            <a class="btn btn-outline-info" href="game.html">Play without a name</a>
+            <a class="btn btn-outline-light" href="about.html">About this project</a>
+          </div>
+        </div>
+      </section>
+      <section class="col-12 col-lg-5">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body p-4">
+            <h2 class="h4 mb-2">Create your player</h2>
+            <p class="text-muted-custom small mb-4">Enter your details and start the adventure.</p>
+            <!-- Bootstrap form elements -->
+            <form action="game.html" method="get">
+              <div class="mb-3">
+                <label for="playerName" class="form-label">Player name</label>
+                <input type="text" class="form-control" id="playerName" name="player" placeholder="Your name" maxlength="24" required>
+              </div>
+              <div class="mb-3">
+                <label for="playerRole" class="form-label">Choose your role</label>
+                <select class="form-select" id="playerRole" name="role">
+                  <option value="Explorer" selected>Explorer</option>
+                  <option value="Scout">Scout</option>
+                  <option value="Guardian">Guardian</option>
+                </select>
+              </div>
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" value="yes" id="readyCheck" required>
+                <label class="form-check-label" for="readyCheck">I am ready to enter the dungeon.</label>
+              </div>
+              <button type="submit" class="btn btn-info w-100 fw-semibold">Start Adventure →</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="mt-5" aria-labelledby="how-to-play">
+      <div class="d-flex justify-content-between flex-wrap gap-2 align-items-center mb-3">
+        <h2 class="h3 mb-0" id="how-to-play">How to play</h2>
+        <span class="small text-muted-custom">Three easy steps</span>
+      </div>
+      <!-- Bootstrap grid: three columns on desktop -->
+      <div class="row g-3">
+        <div class="col-12 col-md-4"><div class="card h-100"><div class="card-body p-4"><span class="step-number">01</span><h3 class="h5 mt-3">Make a choice</h3><p class="mb-0 text-soft">Read the story and click a button to decide where to go.</p></div></div></div>
+        <div class="col-12 col-md-4"><div class="card h-100"><div class="card-body p-4"><span class="step-number">02</span><h3 class="h5 mt-3">Check your HP</h3><p class="mb-0 text-soft">Some choices lower your health. Try to stay safe.</p></div></div></div>
+        <div class="col-12 col-md-4"><div class="card h-100"><div class="card-body p-4"><span class="step-number">03</span><h3 class="h5 mt-3">Find the key</h3><p class="mb-0 text-soft">Collect items to unlock the treasure and finish the game.</p></div></div></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer py-4 mt-auto">
+    <div class="container d-flex flex-column flex-sm-row gap-2 justify-content-between align-items-center">
+      <span>Dungeon Adventure · Story Game Project</span>
+      <span>Made with HTML, CSS, JavaScript &amp; Bootstrap</span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10182b">
+  <title>Play | Dungeon Adventure</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top site-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">◆ Dungeon Adventure</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavbar" aria-controls="siteNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="siteNavbar">
+      <ul class="navbar-nav ms-auto gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="game.html" aria-current="page">Game</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <main class="container py-4 py-md-5">
+    <header class="mb-4">
+      <span class="badge rounded-pill text-bg-info mb-3">THE STORY</span>
+      <h1 class="heading mb-3">Dungeon Adventure</h1>
+      <p class="text-soft mb-0" id="welcome-player">Your journey begins here.</p>
+    </header>
+
+    <!-- Bootstrap grid: story on left, player stats on right -->
+    <div class="row g-4">
+      <section class="col-12 col-lg-8">
+        <div class="card h-100 shadow-sm story-card">
+          <div class="card-body p-4 p-md-5">
+            <span class="small text-uppercase story-kicker">Current location</span>
+            <h2 id="page-title" class="h3 mt-2 mb-3">Loading story...</h2>
+            <p class="small mb-3"><span class="text-muted-custom">Speaking:</span> <strong id="page-character">Narrator</strong></p>
+            <p id="page-text" class="story-text">Your adventure will appear here.</p>
+            <hr class="my-4">
+            <h3 class="h6 text-uppercase text-muted-custom mb-3">What will you do?</h3>
+            <div id="choices" class="d-grid gap-2" aria-label="Story choices"></div>
+            <div id="message-display" class="alert alert-info mt-4 mb-0 d-none" role="status" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+      <aside class="col-12 col-lg-4">
+        <div class="row g-4">
+          <section class="col-12 col-md-6 col-lg-12">
+            <div class="card h-100">
+              <div class="card-body p-4">
+                <h2 class="h5 mb-3">Player Status</h2>
+                <p class="small mb-2" id="player-role-display">Role: Explorer</p>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span>Health</span>
+                  <span class="fw-bold"><span id="health-display">50</span> / 100 HP</span>
+                </div>
+                <div class="progress" role="progressbar" aria-label="Player health" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+                  <div class="progress-bar bg-info" id="health-progress" style="width:50%"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="col-12 col-md-6 col-lg-12">
+            <div class="card h-100">
+              <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <h2 class="h5 mb-0">Inventory</h2>
+                  <span class="badge text-bg-secondary" id="inventory-count">0 items</span>
+                </div>
+                <ul class="list-group" id="inventory-display" aria-live="polite">
+                  <li class="list-group-item">No items yet</li>
+                </ul>
+                <button class="btn btn-outline-light w-100 mt-4" type="button" onclick="restartGame()">Restart Game</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer py-4 mt-auto">
+    <div class="container d-flex flex-column flex-sm-row gap-2 justify-content-between align-items-center">
+      <span>Dungeon Adventure · Story Game Project</span>
+      <span>Made with HTML, CSS, JavaScript &amp; Bootstrap</span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Dungeon Adventure</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #0c1424;
+            color: white;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: #101a2c;
+            border-bottom: 1px solid #31465e;
+        }
+
+        .navbar-brand {
+            color: #8ae6fa;
+        }
+
+        .about-card {
+            background-color: #152239;
+            border: 1px solid #315673;
+            border-radius: 15px;
+            padding: 35px;
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: white;
+            border-bottom: 3px solid #66d9f4;
+            padding-bottom: 15px;
+        }
+
+        p {
+            color: #c8d7e8;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            color: #a5bdd1;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                Dungeon Adventure
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="game.html">
+                            Game
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">
+                            About Me
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-md-9">
+                <div class="about-card">
+
+                    <h1>About Me</h1>
+
+                    <p class="mt-4">
+                        Hi! I'm a high school student.
+                        In my free time, I like hiking,
+                        watching movies, and learning
+                        about technology. I also enjoy
+                        simple and creative designs.
+                    </p>
+
+                    <a href="game.html" class="btn btn-info mt-3">
+                        Play My Game
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        Dungeon Adventure - My Story Game
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
